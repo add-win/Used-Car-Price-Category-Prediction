@@ -15,7 +15,7 @@ def predict_result(age, kilo):
 
     prediction = model.predict(input_poly)[0]
 
-    return f"Predicted Car Price: ₹{prediction:.2f}"
+    return f"Predicted Car Price Category: {prediction}"
 
 
 demo = gr.Interface(
@@ -28,8 +28,8 @@ demo = gr.Interface(
 
     outputs=gr.Textbox(label="Prediction"),
 
-    title="Used Car Price Prediction",
-    description="Predict car price based on Car age and kilometers driven."
+    title="Used Car Price Category Prediction",
+    description="Predict car price category based on Car age and kilometers driven."
 )
 
 
